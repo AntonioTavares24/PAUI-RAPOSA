@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5393A12C-CE46-4916-9577-8F35CB812359}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>PAUI</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Visual Leak Detector\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Visual Leak Detector\lib\Win32;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jorge\Desktop\SDL2_image-2.0.5\include;C:\Users\Jorge\Desktop\SDL2-2.0.10\include;../include;C:\Program Files (x86)\Affectiva\AffdexSDK\include;C:\Program Files\opencv\build\include;D:\boost\boost_1_63_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;libboost_atomic-vc140-mt-1_63.lib;libboost_chrono-vc140-mt-1_63.lib;libboost_container-vc140-mt-1_63.lib;libboost_context-vc140-mt-1_63.lib;libboost_coroutine-vc140-mt-1_63.lib;libboost_date_time-vc140-mt-1_63.lib;libboost_exception-vc140-mt-1_63.lib;libboost_filesystem-vc140-mt-1_63.lib;libboost_graph-vc140-mt-1_63.lib;libboost_iostreams-vc140-mt-1_63.lib;libboost_locale-vc140-mt-1_63.lib;libboost_log_setup-vc140-mt-1_63.lib;libboost_log-vc140-mt-1_63.lib;libboost_math_c99f-vc140-mt-1_63.lib;libboost_math_c99l-vc140-mt-1_63.lib;libboost_math_c99-vc140-mt-1_63.lib;libboost_math_tr1f-vc140-mt-1_63.lib;libboost_math_tr1l-vc140-mt-1_63.lib;libboost_math_tr1-vc140-mt-1_63.lib;libboost_program_options-vc140-mt-1_63.lib;libboost_random-vc140-mt-1_63.lib;libboost_regex-vc140-mt-1_63.lib;libboost_serialization-vc140-mt-1_63.lib;libboost_signals-vc140-mt-1_63.lib;libboost_system-vc140-mt-1_63.lib;libboost_thread-vc140-mt-1_63.lib;libboost_timer-vc140-mt-1_63.lib;libboost_type_erasure-vc140-mt-1_63.lib;libboost_wave-vc140-mt-1_63.lib;libboost_wserialization-vc140-mt-1_63.lib;libboost_test_exec_monitor-vc140-mt-1_63.lib;libboost_prg_exec_monitor-vc140-mt-1_63.lib;libboost_unit_test_framework-vc140-mt-1_63.lib;opencv_calib3d2413.lib;opencv_contrib2413.lib;opencv_core2413.lib;opencv_features2d2413.lib;opencv_flann2413.lib;opencv_gpu2413.lib;opencv_highgui2413.lib;opencv_imgproc2413.lib;opencv_legacy2413.lib;opencv_ml2413.lib;opencv_nonfree2413.lib;opencv_objdetect2413.lib;opencv_ocl2413.lib;opencv_photo2413.lib;opencv_stitching2413.lib;opencv_superres2413.lib;opencv_ts2413.lib;opencv_video2413.lib;opencv_videostab2413.lib;C:\Program Files (x86)\Affectiva\AffdexSDK\lib\release\affdex-native.lib;discpp.lib;dislnc.lib;dislnc_d.lib;disvc.lib;disvc_d.lib;disvcd.lib;disvcd_d.lib;disvcm.lib;disvcm_d.lib;libfftw3-3.lib;libfftw3f-3.lib;libfftw3l-3.lib;ws2_32.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Jorge\Desktop\SDL2_image-2.0.5\lib\x86;C:\Users\Jorge\Desktop\SDL2-2.0.10\lib\x86;../lib/x86;D:\boost\boost_1_63_0\stage\lib;C:\Program Files\opencv\build\x86\vc14\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>discpp.lib;dislnc.lib;dislnc_d.lib;disvc.lib;disvc_d.lib;disvcd.lib;disvcd_d.lib;disvcm.lib;disvcm_d.lib;libfftw3-3.lib;libfftw3f-3.lib;libfftw3l-3.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../lib/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Jorge\Desktop\SDL2_image-2.0.5\include;C:\Users\Jorge\Desktop\SDL2-2.0.10\include;../include;C:\Program Files (x86)\Affectiva\AffdexSDK\include;C:\Program Files\opencv\build\include;D:\boost\boost_1_63_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Jorge\Desktop\SDL2_image-2.0.5\lib\x86;C:\Users\Jorge\Desktop\SDL2-2.0.10\lib\x86;../lib/x86;D:\boost\boost_1_63_0\stage\lib;C:\Program Files\opencv\build\x86\vc14\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;libboost_atomic-vc140-mt-1_63.lib;libboost_chrono-vc140-mt-1_63.lib;libboost_container-vc140-mt-1_63.lib;libboost_context-vc140-mt-1_63.lib;libboost_coroutine-vc140-mt-1_63.lib;libboost_date_time-vc140-mt-1_63.lib;libboost_exception-vc140-mt-1_63.lib;libboost_filesystem-vc140-mt-1_63.lib;libboost_graph-vc140-mt-1_63.lib;libboost_iostreams-vc140-mt-1_63.lib;libboost_locale-vc140-mt-1_63.lib;libboost_log_setup-vc140-mt-1_63.lib;libboost_log-vc140-mt-1_63.lib;libboost_math_c99f-vc140-mt-1_63.lib;libboost_math_c99l-vc140-mt-1_63.lib;libboost_math_c99-vc140-mt-1_63.lib;libboost_math_tr1f-vc140-mt-1_63.lib;libboost_math_tr1l-vc140-mt-1_63.lib;libboost_math_tr1-vc140-mt-1_63.lib;libboost_program_options-vc140-mt-1_63.lib;libboost_random-vc140-mt-1_63.lib;libboost_regex-vc140-mt-1_63.lib;libboost_serialization-vc140-mt-1_63.lib;libboost_signals-vc140-mt-1_63.lib;libboost_system-vc140-mt-1_63.lib;libboost_thread-vc140-mt-1_63.lib;libboost_timer-vc140-mt-1_63.lib;libboost_type_erasure-vc140-mt-1_63.lib;libboost_wave-vc140-mt-1_63.lib;libboost_wserialization-vc140-mt-1_63.lib;libboost_test_exec_monitor-vc140-mt-1_63.lib;libboost_prg_exec_monitor-vc140-mt-1_63.lib;libboost_unit_test_framework-vc140-mt-1_63.lib;opencv_calib3d2413.lib;opencv_contrib2413.lib;opencv_core2413.lib;opencv_features2d2413.lib;opencv_flann2413.lib;opencv_gpu2413.lib;opencv_highgui2413.lib;opencv_imgproc2413.lib;opencv_legacy2413.lib;opencv_ml2413.lib;opencv_nonfree2413.lib;opencv_objdetect2413.lib;opencv_ocl2413.lib;opencv_photo2413.lib;opencv_stitching2413.lib;opencv_superres2413.lib;opencv_ts2413.lib;opencv_video2413.lib;opencv_videostab2413.lib;C:\Program Files (x86)\Affectiva\AffdexSDK\lib\release\affdex-native.lib;discpp.lib;dislnc.lib;dislnc_d.lib;disvc.lib;disvc_d.lib;disvcd.lib;disvcd_d.lib;disvcm.lib;disvcm_d.lib;libfftw3-3.lib;libfftw3f-3.lib;libfftw3l-3.lib;ws2_32.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/SAFESEH:NO %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Python-3.6.1\Python-3.6.1\Include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>D:\Python-3.6.1\Python-3.6.1\PCbuild\amd64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>python36_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bitalino.h" />
+    <ClInclude Include="BoostTools.h" />
+    <ClInclude Include="CAM.hpp" />
+    <ClInclude Include="D:\PAUI-(M-ITI)\Softwares\Affdex-cpp-sdk-samples-master\cpp-sdk-samples-master\common\AFaceListener.hpp" />
+    <ClInclude Include="D:\PAUI-(M-ITI)\Softwares\Affdex-cpp-sdk-samples-master\cpp-sdk-samples-master\common\StatusListener.hpp" />
+    <ClInclude Include="DataBaseClass.hpp" />
+    <ClInclude Include="ECG.hpp" />
+    <ClInclude Include="EDA.hpp" />
+    <ClInclude Include="EEG.hpp" />
+    <ClInclude Include="EMG.hpp" />
+    <ClInclude Include="FixationDataClass.hpp" />
+    <ClInclude Include="EYE.h" />
+    <ClInclude Include="MainTools.h" />
+    <ClInclude Include="MinimalStatusNotifications.h" />
+    <ClInclude Include="NND.h" />
+    <ClInclude Include="OGLGraph.h" />
+    <ClInclude Include="PlottingImageListener.hpp" />
+    <ClInclude Include="SDLTools.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="bitalino.cpp" />
+    <ClCompile Include="BoostTools.cpp" />
+    <ClCompile Include="CAM.cpp" />
+    <ClCompile Include="ECG.cpp" />
+    <ClCompile Include="EDA.cpp" />
+    <ClCompile Include="EEG.cpp" />
+    <ClCompile Include="EMG.cpp" />
+    <ClCompile Include="MainTools.cpp" />
+    <ClCompile Include="OGLGraph.cpp" />
+    <ClCompile Include="PAUI.cpp" />
+    <ClCompile Include="SDLTools.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="UDP.hpp" />
+    <ClCompile Include="WriteToFile.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\libpng.redist.1.6.28.1\build\native\libpng.redist.targets" Condition="Exists('..\packages\libpng.redist.1.6.28.1\build\native\libpng.redist.targets')" />
+    <Import Project="..\packages\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.targets')" />
+    <Import Project="..\packages\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.targets" Condition="Exists('..\packages\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.targets')" />
+    <Import Project="..\packages\libpng.1.6.28.1\build\native\libpng.targets" Condition="Exists('..\packages\libpng.1.6.28.1\build\native\libpng.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\libpng.redist.1.6.28.1\build\native\libpng.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libpng.redist.1.6.28.1\build\native\libpng.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v120.windesktop.msvcstl.dyn.rt-dyn.targets'))" />
+    <Error Condition="!Exists('..\packages\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.1.2.8.8\build\native\zlib.v140.windesktop.msvcstl.dyn.rt-dyn.targets'))" />
+    <Error Condition="!Exists('..\packages\libpng.1.6.28.1\build\native\libpng.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\libpng.1.6.28.1\build\native\libpng.targets'))" />
+  </Target>
+</Project>
